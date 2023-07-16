@@ -19,6 +19,8 @@ function App() {
           return (
             <Square 
               key={index}
+              squareValue={val}
+              index={index}
               squares={squares}
               setSquares={setSquares}
               player={player}
@@ -27,6 +29,7 @@ function App() {
           );
         })}
       </div>
+      <span>{calculateWinner(squares)}</span>
     </div>
   );
 };
